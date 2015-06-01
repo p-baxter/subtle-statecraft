@@ -10,6 +10,7 @@
 var express = require('express');
 
 //https://github.com/expressjs/body-parser
+//npm install body-parser
 var bodyParser = require('body-parser');
 
 //store the express module
