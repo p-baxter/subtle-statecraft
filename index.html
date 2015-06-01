@@ -9,12 +9,26 @@
 <body>
 	<form action="http://127.0.0.1:8080/action" method="post" role="form">
 		<label for="countrySelect">Select Country</label>
-		<select class="form-control form-control-inline" name="country" id="countrySelect">
+		<select class="form-control form-control-inline" name="countrySelect" id="countrySelect">
 			<option>Country 1</option>
 			<option>Country 2</option>
 			<option>Country 3</option>
 			<option>Country 4</option>
 			<option>Country 5</option>
+		</select>
+		<label for="countrySelect">Select Action</label>
+		<select class="form-control form-control-inline" name="actionSelect" id="actionSelect">
+			<option>hold</option>
+			<option>attack</option>
+			<option>support</option>
+			<option>convoy</option>
+		</select>
+		<label for="targetSelect">Target Country</label>
+		<select class="form-control form-control-inline" name="targetSelect" id="countrySelect">
+			<option>Country 1</option>
+			<option>Country 2</option>
+			<option>Country 3</option>
+			<option>Country 4</option>
 		</select>
 		<br><br>
 		<input type="submit">

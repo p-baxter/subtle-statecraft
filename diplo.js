@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 
 
 app.post('/action', function(req,res) {
-	res.send('You selected ' + req.body.country);
+	res.send('You selected ' + req.body.countrySelect + ' to perform ' +req.body.actionSelect + ' on ' + req.body.targetSelect);
 });
 
 app.listen(8080,function() {
