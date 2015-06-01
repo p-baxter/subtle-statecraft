@@ -4,9 +4,26 @@
 
 *******************************/
 
-var http = require('http');
-http.createServer(function(request, response) {
-	response.writeHead(200, {'Content-Type': 'text/plain'});
-	response.end('Hello World\n');
-}).listen(80,'127.0.0.1');
-console.log('Server running at http://127.0.0.1:80/');
+//This requires the express module
+//accessible here http://expressjs.com/
+//install with 'npm install express --save'
+var express = require('express');
+
+//https://github.com/expressjs/body-parser
+var bodyParser = require('body-parser');
+
+//store the express module
+var app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+	extended: true
+}));
+
+
+app.post('/action', function(req,res) {
+	res.send('You selected ' + req.body.country);
+});
+
+app.listen(8080,function() {
+	console.log('Server running at http://127.0.0.1:8080/')
+});
